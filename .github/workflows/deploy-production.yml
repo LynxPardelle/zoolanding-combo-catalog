@@ -19,6 +19,10 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          if [[ "${{ github.event.before }}" =~ ^0+$ ]]; then
+            echo "Allowing initial production branch bootstrap."
+            exit 0
+          fi
           git fetch origin test main
           parent_count="$(git rev-list --parents -n 1 HEAD | awk '{print NF-1}')"
           if [[ "$parent_count" -lt 2 ]]; then
