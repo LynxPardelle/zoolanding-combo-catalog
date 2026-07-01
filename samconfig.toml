@@ -1,0 +1,25 @@
+version = 0.1
+
+[dev.deploy.parameters]
+stack_name = "zoolanding-combo-catalog-dev"
+resolve_s3 = true
+region = "us-east-1"
+capabilities = "CAPABILITY_NAMED_IAM"
+confirm_changeset = false
+fail_on_empty_changeset = false
+
+[test.deploy.parameters]
+stack_name = "zoolanding-combo-catalog-test"
+resolve_s3 = true
+region = "us-east-1"
+capabilities = "CAPABILITY_NAMED_IAM"
+confirm_changeset = false
+fail_on_empty_changeset = false
+
+[prod.deploy.parameters]
+stack_name = "zoolanding-combo-catalog-prod"
+resolve_s3 = true
+region = "us-east-1"
+capabilities = "CAPABILITY_NAMED_IAM"
+confirm_changeset = false
+fail_on_empty_changeset = false
