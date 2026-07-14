@@ -5,9 +5,8 @@ Description: Zoolanding generic combo catalog for reusable Angora CSS presets
 Parameters:
   EnvironmentName:
     Type: String
-    Default: dev
+    Default: test
     AllowedValues:
-      - dev
       - test
       - prod
   ComboCatalogConfigJsonBase64:
